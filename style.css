@@ -1,0 +1,17 @@
+div {
+    background-color: red;
+    display: flex;
+    margin: 10px;
+}
+.logo{
+    background-color: yellow;
+}
+.location{
+    background-color: greenyellow;
+}
+.nav_option{
+    background-color: blue;
+}
+.account{
+    background-color: blueviolet;
+}
