@@ -1,17 +1,74 @@
 div {
-    background-color: red;
+    /* display: flex; */
+    /* margin: 10px; */
+    font-family: poppins;
+}
+.nav_bar{
     display: flex;
-    margin: 10px;
+    /* justify-content:end */
+    /* align-items:center */
 }
 .logo{
-    background-color: yellow;
+    position: relative;
+    left: 100px;
 }
 .location{
-    background-color: greenyellow;
+    position: relative;
+    left: 150px;
 }
 .nav_option{
-    background-color: blue;
+    position: relative;
+    left: 400px;
 }
 .account{
-    background-color: blueviolet;
+    position: relative;
+    left: 900px;
+}
+.logo .logoimg{
+height: 35px;
+width: 85px;
+}
+
+.location b{
+    position: relative;
+    top: 2px;
+}
+button{
+    border: 0px;
+}
+button:hover{
+  font-weight: 900;
+  text-decoration:underline rgb(246, 165, 3) 5px;
+}
+.middle{
+    /* display: flex; */
+    position: relative;
+}
+.body_img{
+    height: 500px;
+    width:1400px;
+}
+.img_text{
+    position:absolute;
+    top:90px;
+    left: 150px;
+    color: white;
+}
+input  {
+    border-radius: 10px;
+    width: 600px;
+    height: 40px;
+}
+.car_bar{
+    display: flex;
+    justify-content:space-evenly;
+    /* background-color: white; */
+}
+.company img{
+    height: 50px;
+    width: 100px;
+}
+.a{
+    background-color:white;
+    border-radius: 10px;
 }
