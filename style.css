@@ -125,3 +125,30 @@ input  {
     font-size: 15px;
     color: lightslategray;
 }
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #acdafa;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+}
+.left p{
+   
+    font-size: 15px;
+    font-weight: 600; 
+    padding-right: 50px;
+}
+.stores{
+    display: flex;
+}
+.middle p{
+    font-size:14px ;
+    color:rgb(39, 37, 37);
+    font-weight: 500;
+    padding-right: 50px;
+}
