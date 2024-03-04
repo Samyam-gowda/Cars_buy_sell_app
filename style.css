@@ -13,6 +13,7 @@ div {
     left: 100px;
 }
 .location{
+    display: flex;
     position: relative;
     left: 150px;
 }
@@ -21,6 +22,7 @@ div {
     left: 400px;
 }
 .account{
+    display: flex;
     position: relative;
     left: 900px;
 }
@@ -71,4 +73,55 @@ input  {
 .a{
     background-color:white;
     border-radius: 10px;
+}
+.search_bar{
+    display: flex;
+    align-items: center;
+}
+.search_icon{
+    color:black;
+    background-color:white;
+}
+.why_buy{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.card-img-top{
+    width: 250px;
+    height: 150px;
+}
+.card-text{
+    width: 250px;
+    color: #002441;
+}
+.heading{
+    font-weight: 600;
+    font-size: 25px;
+    padding-left: 110px;
+    padding-bottom: 15px;
+    color: #002441;
+}
+.btn-primary{
+    color: orange;
+    font-weight: 600;
+}
+.horizontal{
+    display: flex;
+}
+.img{
+    margin-left: 150px;
+    margin-right: 20px;
+    height: 100px;
+    width: 100px;
+}
+.steps-buy{
+    font-size: 18px;
+    color: #002441;
+}
+.x{
+    font-size: 15px;
+    color: lightslategray;
 }
