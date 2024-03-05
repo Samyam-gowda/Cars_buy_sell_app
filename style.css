@@ -4,10 +4,19 @@ div {
     font-family: poppins;
 }
 .nav_bar{
+    position: fixed;
+     top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* ensure it's above other content */
     display: flex;
-    /* justify-content:end */
-    /* align-items:center */
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    background-color: white;
 }
+
+
 .logo{
     position: relative;
     left: 100px;
@@ -57,9 +66,12 @@ button:hover{
     color: white;
 }
 input  {
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     width: 600px;
     height: 40px;
+    outline: none;
 }
 .car_bar{
     display: flex;
@@ -69,6 +81,8 @@ input  {
 .company img{
     height: 50px;
     width: 100px;
+    padding: 10px;
+    
 }
 .a{
     background-color:white;
@@ -81,6 +95,9 @@ input  {
 .search_icon{
     color:black;
     background-color:white;
+    padding: 9px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .why_buy{
     display: flex;
