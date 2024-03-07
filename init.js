@@ -25,7 +25,7 @@ let hondaCars = [
   },
   {
     sn: 1,
-    model: "019 Honda City 1.5L I-DTE V",
+    model: "2019 Honda City 1.5L I-DTE V",
     specs: "DIESEL| manual | 1,60,298 KM",
     owner: "1st owoner",
     price: 9.5,
@@ -57,5 +57,95 @@ let hondaCars = [
     specs: "Petrol | Manual | 40,298 KM",
     owner: "2nd owoner",
     price: 7.29,
+  },
+];
+
+let maruthicars= [
+  {
+    sn: 0,
+    model: "2018 Maruti Swift VXI AMTAutomatic",
+    specs: "petrol | manual |23,298 KM",
+    owner: "1st owoner",
+    price: 5.83
+  },
+  {
+    sn: 1,
+    model: "2016 Maruti Baleno ZETA PETROL 1.2 Manual",
+    specs: "DIESEL| manual |60,298 KM",
+    owner: "2nd owoner",
+    price: 5.37
+  },
+  {
+    sn: 2,
+    model: "2012 Maruti Ertiga VDIManual",
+    specs: "DIESEL| manual | 1,28,297 KM",
+    owner: "3rd owoner",
+    price: 6.13,
+  },
+  {
+    sn: 3,
+    model: "2017 Maruti IGNIS ZETA 1.2 AMT",
+    specs: "PETROL | Automatic |19,495 KM",
+    owner: "1st owoner",
+    price: 6.12,
+  },
+  {
+    sn: 4,
+    model: "2018 Maruti Vitara Brezza ZDI PLUS AMTAutomatic",
+    specs: "DIESEL | Automatic |56,000 KM",
+    owner: "1st owoner",
+    price: 7.93,
+  },
+  {
+    sn: 5,
+    model: "2017 Maruti Ciaz SIGMA 1.4 MT PETROLManual",
+    specs: "petrol | manual |76,298 KM",
+    owner: "2nd owoner",
+    price: 5.89,
+  },
+];
+
+let hyundaicars= [
+  {
+    sn: 0,
+    model: "2019 Hyundai Elite i20 ASTA (O) CVTAutomatic",
+    specs: "petrol | Automatic |23,298 KM",
+    owner: "1st owoner",
+    price: 7.71
+  },
+  {
+    sn: 1,
+    model: "2016 Maruti Baleno ZETA PETROL 1.2 Manual",
+    specs: "DIESEL| manual |60,298 KM",
+    owner: "2nd owoner",
+    price: 5.37
+  },
+  {
+    sn: 2,
+    model: "2012 Maruti Ertiga VDIManual",
+    specs: "DIESEL| manual | 1,28,297 KM",
+    owner: "3rd owoner",
+    price: 6.13,
+  },
+  {
+    sn: 3,
+    model: "2017 Maruti IGNIS ZETA 1.2 AMT",
+    specs: "PETROL | Automatic |19,495 KM",
+    owner: "1st owoner",
+    price: 6.12,
+  },
+  {
+    sn: 4,
+    model: "2018 Maruti Vitara Brezza ZDI PLUS AMTAutomatic",
+    specs: "DIESEL | Automatic |56,000 KM",
+    owner: "1st owoner",
+    price: 7.93,
+  },
+  {
+    sn: 5,
+    model: "2017 Maruti Ciaz SIGMA 1.4 MT PETROLManual",
+    specs: "petrol | manual |76,298 KM",
+    owner: "2nd owoner",
+    price: 5.89,
   },
 ];
