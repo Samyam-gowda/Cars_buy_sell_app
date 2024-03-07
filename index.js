@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
+const honda = require("./models/honda.js");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -14,28 +15,31 @@ app.get("/home", (req, res) => {
 });
 
 // Maruthi Suzuki
-app.get("/home/suzuki",(req,res) => {
-    res.render("suzuki.ejs");
+app.get("/home/suzuki", (req, res) => {
+  res.render("suzuki.ejs");
 });
 
 // Hyundai
-app.get("/home/hyundai",(req,res) => {
-    res.render("hyundai.ejs");
+app.get("/home/hyundai", (req, res) => {
+  res.render("hyundai.ejs");
 });
 
 // Honda
-app.get("/home/honda",(req,res) => {
-    res.render("honda.ejs");
+app.get("/home/honda", async (req, res) => {
+  let hondas = await honda.find();
+  const hondaImage = [];
+  console.log(hondas);
+  res.render("honda.ejs", { hondas, hondaImage });
 });
 
 // Renault
-app.get("/home/renault",(req,res) => {
-    res.render("renault.ejs");
+app.get("/home/renault", (req, res) => {
+  res.render("renault.ejs");
 });
 
 // Tata
-app.get("/home/tata",(req,res) => {
-    res.render("tata.ejs");
+app.get("/home/tata", (req, res) => {
+  res.render("tata.ejs");
 });
 
 app.get("/", (req, res) => {
