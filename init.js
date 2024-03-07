@@ -115,37 +115,127 @@ let hyundaicars= [
   },
   {
     sn: 1,
-    model: "2016 Maruti Baleno ZETA PETROL 1.2 Manual",
-    specs: "DIESEL| manual |60,298 KM",
-    owner: "2nd owoner",
-    price: 5.37
+    model: "2017 Hyundai Grand i10 MAGNA 1.2 KAPPA VTVTManual",
+    specs: "PETROL| manual | 60,298 KM",
+    owner: "3rd owoner",
+    price: 4.05
   },
   {
     sn: 2,
-    model: "2012 Maruti Ertiga VDIManual",
-    specs: "DIESEL| manual | 1,28,297 KM",
-    owner: "3rd owoner",
-    price: 6.13,
+    model: "2021 Hyundai NEW I20 SPORTZ 1.5 MTManual",
+    specs: "DIESEL| manual | 77,297 KM",
+    owner: "1st owoner",
+    price: 7.84,
   },
   {
     sn: 3,
-    model: "2017 Maruti IGNIS ZETA 1.2 AMT",
-    specs: "PETROL | Automatic |19,495 KM",
-    owner: "1st owoner",
-    price: 6.12,
+    model: "2011 Hyundai i20 MAGNA (O) 1.2Manual",
+    specs: "PETROL | Manual| 1,19,495 KM",
+    owner: "3rd owoner",
+    price: 2.52,
   },
   {
     sn: 4,
-    model: "2018 Maruti Vitara Brezza ZDI PLUS AMTAutomatic",
-    specs: "DIESEL | Automatic |56,000 KM",
-    owner: "1st owoner",
-    price: 7.93,
+    model: "2014 Hyundai Verna FLUIDIC 1.6 CRDI EXManual",
+    specs: "DIESEL | Manual |1,56,000 KM",
+    owner: "2nd owoner",
+    price: 4.93,
   },
   {
     sn: 5,
-    model: "2017 Maruti Ciaz SIGMA 1.4 MT PETROLManual",
-    specs: "petrol | manual |76,298 KM",
+    model: "2016 Hyundai Creta SX PLUS 1.6 PETROLManual",
+    specs: "petrol | manual | 76,298 KM",
     owner: "2nd owoner",
-    price: 5.89,
+    price: 7.95,
+  },
+];
+
+let renaultcars= [
+  {
+    sn: 0,
+    model: "2014 Renault Duster 85 PS RXE DIESELManual",
+    specs: "DIESEL | manual| 1,19,298 KM",
+    owner: "1st owoner",
+    price: 4.22
+  },
+  {
+    sn: 1,
+    model: "2019 Renault TRIBER RXZManual",
+    specs: "PETROL| manual | 60,298 KM",
+    owner: "1st owoner",
+    price: 6.27
+  },
+  {
+    sn: 2,
+    model: "2019 Renault Kwid CLIMBER 1.0 AMTAutomatic",
+    specs: "DIESEL| Automatic17,297 KM",
+    owner: "2nd owoner",
+    price: 3.84,
+  },
+  {
+    sn: 3,
+    model: "2016 Renault Duster RXL PETROLManual",
+    specs: "PETROL | Manual|79,495 KM",
+    owner: "1st owoner",
+    price: 6.43,
+  },
+  {
+    sn: 4,
+    model: "2014 Renault Pulse RX L DIESELManual",
+    specs: "DIESEL | Manual |83,000 KM",
+    owner: "1st owoner",
+    price: 3.01,
+  },
+  {
+    sn: 5,
+    model: "2018 Renault Duster RXS CVTAutomatic",
+    specs: "DIESEL | Automatic|36,298 KM",
+    owner: "2nd owoner",
+    price: 8.32,
+  },
+];
+
+let tatatcars= [
+  {
+    sn: 0,
+    model: "2020 Tata Tiago XZ PLUS DUAL TONE PETROLManual ",
+    specs: "petrol | manual | 60,298 KM",
+    owner: "2nd owoner",
+    price: 6.43
+  },
+  {
+    sn: 1,
+    model: "2019 Tata NEXON XZA PLUS DIESELAutomatic",
+    specs: "DIESEL| manual | 1,60,298 KM",
+    owner: "1st owoner",
+    price: 9.50
+  },
+  {
+    sn: 2,
+    model: "2019 Tata Harrier  XZ 2.0LManuall",
+    specs: "DIESEL | manual | 28,297 KM",
+    owner: "1st owoner",
+    price: 12.41,
+  },
+  {
+    sn: 3,
+    model: "2017 Tata Bolt XM QUADRAJET Manual",
+    specs: "DIESEL | manual | 89,495 KM",
+    owner: "1st owoner",
+    price: 3.18,
+  },
+  {
+    sn: 4,
+    model: "2019 Tata NEXON  XZA PLUS DIESEL Automatic",
+    specs: "petrol | Automatic|1,80,000 KM",
+    owner: "2nd owoner",
+    price: 8.93,
+  },
+  {
+    sn: 5,
+    model: "2019 Tata TIGOR XM (O) PETROL Manual",
+    specs: "petrol | manual | 40,298 KM",
+    owner: "2nd owoner",
+    price: 4.29,
   },
 ];

@@ -35,8 +35,9 @@ div {
   left: 900px;
 }
 .logo .logoimg {
-  height: 35px;
-  width: 85px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
 }
 
 .location b {
@@ -53,10 +54,12 @@ button:hover {
 .middle {
   /* display: flex; */
   position: relative;
+  top:70px ;
 }
 .body_img {
   height: 500px;
   width: 1400px;
+  margin-left: 50px;
 }
 .img_text {
   position: absolute;
