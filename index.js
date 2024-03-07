@@ -13,6 +13,31 @@ app.get("/home", (req, res) => {
   res.render("home.ejs");
 });
 
+// Maruthi Suzuki
+app.get("/home/suzuki",(req,res) => {
+    res.render("suzuki.ejs");
+});
+
+// Hyundai
+app.get("/home/hyundai",(req,res) => {
+    res.render("hyundai.ejs");
+});
+
+// Honda
+app.get("/home/honda",(req,res) => {
+    res.render("honda.ejs");
+});
+
+// Renault
+app.get("/home/renault",(req,res) => {
+    res.render("renault.ejs");
+});
+
+// Tata
+app.get("/home/tata",(req,res) => {
+    res.render("tata.ejs");
+});
+
 app.get("/", (req, res) => {
   res.send("working");
 });
