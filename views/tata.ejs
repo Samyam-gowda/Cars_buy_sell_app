@@ -39,27 +39,26 @@
         </div>
       </div>
 
-      <div class="honda">
-        <br /><br />
-        <h1 class="heading">USED TATA CARS IN BANGALORE</h1>
-        <div class="first3">
-          <% for(let tata in tatas){ %>
-          <div class="card" style="width: 18rem">
+      <section class="car-list maruthi">
+        <h1 class="heading">USED MARUTI SUZUKI CARS IN BANGALORE</h1>
+        <div class="car-grid">
+          <% for(let tata of tatas) { %>
+          <div class="car-card">
             <img
               src="<%= tataImage[tata.sn] %>"
-              class="card-img-top"
-              alt="..."
+              class="car-image"
+              alt="Car Image"
             />
-            <div class="card-body">
-              <div><h3><%= tata.model %></h3></div>
-              <div><p><%= tata.specs %></p></div>
-              <div><p><%= tata.owner %></p></div>
-              <div><h2><%= tata.price %></h2></div>
+            <div class="car-details">
+              <h2 class="car-model"><%= tata.model %></h2>
+              <p class="car-specs"><%= tata.specs %></p>
+              <p class="car-owner"><%= tata.owner %></p>
+              <h3 class="car-price">Price: ₹ <%= tata.price %> Lakhs</h3>
             </div>
           </div>
           <% } %>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>

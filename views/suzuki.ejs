@@ -39,27 +39,26 @@
         </div>
       </div>
 
-      <div class="maruthi">
-        <br /><br />
-        <h1 class="heading">USED MARUTHI SUZUKI CARS IN BANGALORE</h1>
-        <div class="first3">
-          <% for(let maruthi in maruthis){ %>
-          <div class="card" style="width: 18rem">
+      <section class="car-list maruthi">
+        <h1 class="heading">USED MARUTI SUZUKI CARS IN BANGALORE</h1>
+        <div class="car-grid">
+          <% for(let maruthi of maruthis) { %>
+          <div class="car-card">
             <img
-              src="<%= suzukiImage[maruthi.sn] %>"
-              class="card-img-top"
-              alt="..."
+              src="<%= maruthiImage[maruthi.sn] %>"
+              class="car-image"
+              alt="Car Image"
             />
-            <div class="card-body">
-              <div><h3><%= maruthi.model %></h3></div>
-              <div><p><%= maruthi.specs %></p></div>
-              <div><p><%= maruthi.owner %></p></div>
-              <div><h2><%= maruthi.price %></h2></div>
+            <div class="car-details">
+              <h2 class="car-model"><%= maruthi.model %></h2>
+              <p class="car-specs"><%= maruthi.specs %></p>
+              <p class="car-owner"><%= maruthi.owner %></p>
+              <h3 class="car-price">Price: ₹ <%= maruthi.price %> Lakhs</h3>
             </div>
           </div>
           <% } %>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>

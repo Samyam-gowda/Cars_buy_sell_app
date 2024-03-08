@@ -39,27 +39,26 @@
         </div>
       </div>
 
-      <div class="hyundai">
-        <br /><br />
-        <h1 class="heading">USED HYUNDAI CARS IN BANGALORE</h1>
-        <div class="first3">
-          <% for(let hyundai in hyundais){ %>
-          <div class="card" style="width: 18rem">
+      <section class="car-list maruthi">
+        <h1 class="heading">USED MARUTI SUZUKI CARS IN BANGALORE</h1>
+        <div class="car-grid">
+          <% for(let hyundai of hyundais) { %>
+          <div class="car-card">
             <img
               src="<%= hyundaiImage[hyundai.sn] %>"
-              class="card-img-top"
-              alt="..."
+              class="car-image"
+              alt="Car Image"
             />
-            <div class="card-body">
-              <div><h3><%= hyundai.model %></h3></div>
-              <div><p><%= hyundai.specs %></p></div>
-              <div><p><%= hyundai.owner %></p></div>
-              <div><h2><%= hyundai.price %></h2></div>
+            <div class="car-details">
+              <h2 class="car-model"><%= hyundai.model %></h2>
+              <p class="car-specs"><%= hyundai.specs %></p>
+              <p class="car-owner"><%= hyundai.owner %></p>
+              <h3 class="car-price">Price: ₹ <%= hyundai.price %> Lakhs</h3>
             </div>
           </div>
           <% } %>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
