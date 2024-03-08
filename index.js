@@ -7,6 +7,7 @@ const hyundai = require("./models/hyundai.js");
 const maruthi = require("./models/maruthi.js");
 const renault = require("./models/renault.js");
 const tata = require("./models/tata.js");
+const login = require("./models/login.js")
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -96,6 +97,10 @@ app.get("/home/tata", async (req, res) => {
     "/requirements/t6.webp",
   ];
   res.render("tata.ejs", { tatas, tataImage });
+});
+
+app.get("/home/login", (req, res) => {
+  res.render("login.ejs");
 });
 
 app.get("/", (req, res) => {
