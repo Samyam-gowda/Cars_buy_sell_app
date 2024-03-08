@@ -170,11 +170,19 @@ input {
   padding-bottom: 15px;
   color: #002441;
 }
+.easy-steps{
+  padding: 0;
+  margin-left: 150px;
+}
 .horizontal {
   display: flex;
+  width: 750px;
+  background-color:  rgba(219, 84, 17, 0.296);
+  margin-left: 100px;
+  border-radius: 25px;
 }
 .img {
-  margin-left: 150px;
+  /* margin-left: 150px; */
   margin-right: 20px;
   height: 100px;
   width: 100px;
@@ -185,13 +193,16 @@ input {
 }
 .x {
   font-size: 15px;
-  color: lightslategray;
+  color: rgba(0, 0, 0, 0.586)
 }
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #acdafa;
+  background-color: #0d85dba4;
+  justify-content: space-evenly;
+  border:3px solid rgb(57, 60, 22);
+  border-radius: 20px;
 }
 
 .icons {
@@ -207,7 +218,7 @@ input {
 .stores {
   display: flex;
 }
-.middle p {
+.middle-foot p {
   font-size: 14px;
   color: rgb(39, 37, 37);
   font-weight: 500;
@@ -216,4 +227,7 @@ input {
 button {
   margin-left: 5px;
   border-radius: 20px;
+}
+button:hover{
+  padding: 5px;
 }
