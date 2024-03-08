@@ -2,16 +2,21 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('background.jpg');
+    background-image: url('/requirements/login-back.webp');
+    /* background-color: rgba(255, 255, 255, 0.1);  */
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/requirements/login-back.webp');
+
 }
 
 .login-container {
     max-width: 400px;
     margin: 100px auto;
-    background-color: rgba(129, 129, 129, 0.8); 
+    background: linear-gradient(to top right, #bfe712, #ef0d0dfe); /* Adjust the opacity to make the container more visible */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(83, 52, 52, 0.1);
+    opacity: 1;
+    z-index: 1000;
 }
 
 h2 {
@@ -19,8 +24,7 @@ h2 {
 }
 
 input[type="text"],
-input[type="password"],
-button {
+input[type="password"] {
     display: block;
     width: 92%;
     padding: 10px;
@@ -28,6 +32,8 @@ button {
     background-color: rgba(203, 196, 196, 0.389);
     border: none;
     border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 input[type="text"]::placeholder,
@@ -41,24 +47,27 @@ button {
     cursor: pointer;
     margin: 10px;
     border-radius: 5px;
+    width: 100px;
+    margin-left: 145px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.25s;
 }
 
 button:hover {
-    background-color: rgba(0, 123, 255, 1); 
+    background-color: rgb(192, 109, 136); 
+    transform: scale(1.15);
+   
 }
 img {
-    width: 79px;
-    height: auto; 
+    width: 100px;
+    height: 100px; 
     margin: 0 auto 20px; 
     display:flex ;
+    border-radius: 50%;
 
 }
-
-/* .name{
-    list-style: none;
-    display: flex;
-    justify-content:center;
-} */
 
 
 .name {
@@ -69,4 +78,4 @@ img {
   font-family: 'Caveat', cursive;
   display: flex;
   justify-content:center;
-}
+} 
