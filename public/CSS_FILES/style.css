@@ -73,17 +73,19 @@ button {
 }
 .fa-user{
   font-size: 25px;
+  background: none;
 }
 .sell:hover {
   font-weight: 900;
   background-color: rgb(156, 223, 89);
 }
 .middle {
-  /* display: flex; */
+ 
   position: relative;
   top:70px ;
 }
 .body_img {
+  border-radius: 15px;
   top: 500px;
   height: 700px;
   width: 1400px;
