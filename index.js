@@ -39,7 +39,6 @@ app.get("/home/suzuki", async (req, res) => {
     "/requirements/m5.webp",
     "/requirements/m6.webp",
   ];
-  console.log(maruthis);
   res.render("suzuki.ejs", { maruthis, maruthiImage });
 });
 
@@ -54,7 +53,6 @@ app.get("/home/hyundai", async (req, res) => {
     "/requirements/hy5.webp",
     "/requirements/hy6.webp",
   ];
-  console.log(hyundais);
   res.render("hyundai.ejs", { hyundais, hyundaiImage });
 });
 
@@ -69,7 +67,6 @@ app.get("/home/honda", async (req, res) => {
     "/requirements/h5.webp",
     "/requirements/h6.webp",
   ];
-  console.log(hondas);
   res.render("honda.ejs", { hondas, hondaImage });
 });
 
@@ -84,7 +81,6 @@ app.get("/home/renault", async (req, res) => {
     "/requirements/r5.webp",
     "/requirements/r6.webp",
   ];
-  console.log(renaults);
   res.render("renault.ejs", { renaults, renaultImage });
 });
 
@@ -99,7 +95,6 @@ app.get("/home/tata", async (req, res) => {
     "/requirements/t5.webp",
     "/requirements/t6.webp",
   ];
-  console.log(tatas);
   res.render("tata.ejs", { tatas, tataImage });
 });
 
