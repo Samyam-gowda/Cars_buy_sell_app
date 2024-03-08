@@ -7,7 +7,7 @@ const hyundai = require("./models/hyundai.js");
 const maruthi = require("./models/maruthi.js");
 const renault = require("./models/renault.js");
 const tata = require("./models/tata.js");
-const login = require("./models/login.js")
+const login = require("./models/login.js");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -26,7 +26,7 @@ async function main() {
 }
 
 app.get("/home", (req, res) => {
-  res.render("home.ejs");
+  res.render("home.ejs", { name: globalName});
 });
 
 // Maruthi Suzuki
@@ -40,7 +40,7 @@ app.get("/home/suzuki", async (req, res) => {
     "/requirements/m5.webp",
     "/requirements/m6.webp",
   ];
-  res.render("suzuki.ejs", { maruthis, maruthiImage });
+  res.render("suzuki.ejs", { maruthis, maruthiImage, name: globalName });
 });
 
 // Hyundai
@@ -54,7 +54,7 @@ app.get("/home/hyundai", async (req, res) => {
     "/requirements/hy5.webp",
     "/requirements/hy6.webp",
   ];
-  res.render("hyundai.ejs", { hyundais, hyundaiImage });
+  res.render("hyundai.ejs", { hyundais, hyundaiImage, name: globalName });
 });
 
 // Honda
@@ -68,7 +68,7 @@ app.get("/home/honda", async (req, res) => {
     "/requirements/h5.webp",
     "/requirements/h6.webp",
   ];
-  res.render("honda.ejs", { hondas, hondaImage });
+  res.render("honda.ejs", { hondas, hondaImage, name: globalName });
 });
 
 // Renault
@@ -82,7 +82,7 @@ app.get("/home/renault", async (req, res) => {
     "/requirements/r5.webp",
     "/requirements/r6.webp",
   ];
-  res.render("renault.ejs", { renaults, renaultImage });
+  res.render("renault.ejs", { renaults, renaultImage, name: globalName });
 });
 
 // Tata
@@ -96,12 +96,33 @@ app.get("/home/tata", async (req, res) => {
     "/requirements/t5.webp",
     "/requirements/t6.webp",
   ];
-  res.render("tata.ejs", { tatas, tataImage });
+  res.render("tata.ejs", { tatas, tataImage, name: globalName });
 });
 
 app.get("/home/login", (req, res) => {
   res.render("login.ejs");
 });
+
+let globalName = "";
+
+app.post("/home", async (req, res) => {
+  try {
+    let { name, password } = req.body;
+    let newUser = new login({
+      name: name,
+      password: password,
+    });
+    await newUser.save();
+    console.log("New User created");
+    globalName = name;
+    console.log(globalName)
+    res.redirect("/home");
+  } catch (error) {
+    console.error("Error creating new user:", error);
+    res.status(500).send("Error creating new user");
+  }
+});
+
 
 app.get("/", (req, res) => {
   res.send("working");

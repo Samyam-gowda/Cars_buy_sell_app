@@ -10,18 +10,17 @@
   <body>
     <div class="login-container">
       <img src="logo.png" alt="logo" />
-
-      <form id="login-form" action="welcome" method="post">
-        <input type="text" placeholder="Username" name="username" required />
+      <form method="POST" action="/home">
+        <input type="text" name="name" placeholder="Name" required />
         <input
           type="password"
-          placeholder="Password"
           name="password"
+          placeholder="Password"
           required
         />
-        <div class="log">
-          <button type="submit">Login</button>
-        </div>
+        <form method="GET" action="/home">
+        <button type="submit">Submit</button>
+        </form>
       </form>
     </div>
   </body>
