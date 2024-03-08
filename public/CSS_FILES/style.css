@@ -3,6 +3,11 @@ div {
   /* margin: 10px; */
   font-family: poppins;
 }
+
+body {
+  background: linear-gradient(to top right, #7feaa6, #f07e9e);
+}
+
 .nav_bar {
   position: fixed;
   top: 0;
@@ -13,31 +18,50 @@ div {
   align-items: center;
   padding-bottom: 15px;
   padding-top: 5px;
-  background-color: white;
+  background: linear-gradient(to top right, #f7df80, #fefea5);
+  border: 2px solid rgb(250, 183, 75);
+  height: 75px;
 }
 
 .logo {
   position: relative;
   left: 100px;
 }
+.fa-location-dot{
+font-size: 35px;
+padding-right: 10px;
+}
+
 .location {
   display: flex;
   position: relative;
+  font-size: 22px;
   left: 150px;
 }
 .nav_option {
   position: relative;
   left: 400px;
 }
+.buy{
+  font-size: 20px;
+  font-weight: 900;
+  margin-right: 20px;
+  background-color:  rgb(156, 223, 89);
+}
+.sell{
+  font-size: 20px;
+  font-weight: 900;
+}
 .account {
   display: flex;
   position: relative;
-  left: 900px;
+  left: 850px;
 }
+
 .logo .logoimg {
   height: 80px;
-  width: 80px;
-  border-radius: 50%;
+  width: 100px;
+  border-radius: 30%;
 }
 
 .location b {
@@ -47,9 +71,12 @@ div {
 button {
   border: 0px;
 }
-button:hover {
+.fa-user{
+  font-size: 25px;
+}
+.sell:hover {
   font-weight: 900;
-  text-decoration: underline rgb(246, 165, 3) 5px;
+  background-color: rgb(156, 223, 89);
 }
 .middle {
   /* display: flex; */
@@ -57,15 +84,17 @@ button:hover {
   top:70px ;
 }
 .body_img {
-  height: 500px;
+  top: 500px;
+  height: 700px;
   width: 1400px;
   margin-left: 50px;
+  opacity: 0.9;
 }
 .img_text {
   position: absolute;
-  top: 90px;
+  top: 200px;
   left: 150px;
-  color: white;
+  color: rgb(19, 14, 14);
 }
 input {
   /* border-radius: 10px; */
@@ -111,9 +140,24 @@ input {
   padding-left: 100px;
   padding-right: 100px;
 }
+
 .card-img-top {
+  width: 290px;
+  height: 180px;
+}
+.card-body{
+  padding: 20px;
   width: 250px;
-  height: 150px;
+  background-color: rgba(219, 84, 17, 0.296);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.btn-primary{
+  margin-left: 15px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  font-size: 20px;
+  color:rgb(235, 80, 46);
 }
 .card-text {
   width: 250px;
@@ -125,10 +169,6 @@ input {
   padding-left: 110px;
   padding-bottom: 15px;
   color: #002441;
-}
-.btn-primary {
-  color: orange;
-  font-weight: 600;
 }
 .horizontal {
   display: flex;
