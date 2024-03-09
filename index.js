@@ -309,8 +309,32 @@ app.get("/home/renault/add", (req, res) => {
 
 app.delete("/home/suzuki/:id", async (req, res) => {
   let { id } = req.params;
-  let deleteCar = await maruthi.findByIdAndDelete(id);
+  await maruthi.findByIdAndDelete(id);
   res.redirect("/home/suzuki");
+});
+
+app.delete("/home/honda/:id", async (req, res) => {
+  let { id } = req.params;
+  await honda.findByIdAndDelete(id);
+  res.redirect("/home/honda");
+});
+
+app.delete("/home/tata/:id", async (req, res) => {
+  let { id } = req.params;
+  await tata.findByIdAndDelete(id);
+  res.redirect("/home/tata");
+});
+
+app.delete("/home/hyundai/:id", async (req, res) => {
+  let { id } = req.params;
+  await hyundai.findByIdAndDelete(id);
+  res.redirect("/home/hyundai");
+});
+
+app.delete("/home/renault/:id", async (req, res) => {
+  let { id } = req.params;
+  await renault.findByIdAndDelete(id);
+  res.redirect("/home/hyundai");
 });
 
 app.get("/", (req, res) => {

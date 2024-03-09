@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hyundai</title>
-    <link rel="icon" href="/requirements/newlogo.webp">
-    <link rel="stylesheet" href="/CSS_FILES/maruthi.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
-<body>
-<div>
-    <div class = "nav_bar">
+    <link rel="icon" href="/requirements/newlogo.webp" />
+    <link rel="stylesheet" href="/CSS_FILES/maruthi.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div>
+      <div class="nav_bar">
         <div class="logo">
-            <img class="logoimg"   src="/requirements/newlogo.webp" alt="logo">
+          <img class="logoimg" src="/requirements/newlogo.webp" alt="logo" />
         </div>
 
         <div class="location">
-            <i class="fa-solid fa-location-dot"></i> <b>Bangalore</b>
+          <i class="fa-solid fa-location-dot"></i> <b>Bangalore</b>
         </div>
 
         <div class="nav_option">
-            <button class="buy"> Buy car</button>
-            <button class="sell"> Sell car</button>
+          <button class="buy">Buy car</button>
+          <button class="sell">Sell car</button>
         </div>
         <div class="account">
-            <form method="GET" action="/home/login">
+          <form method="GET" action="/home/login">
             <button class="fa-solid fa-user"></button>
-            </form> 
-            <b> &nbsp;&nbsp;&nbsp;&nbsp; <%= name || 'Account' %> </b>
+          </form>
+          <b> &nbsp;&nbsp;&nbsp;&nbsp; <%= name || 'Account' %> </b>
         </div>
-    </div><br><br><br><br>
+      </div>
+      <br /><br /><br /><br />
       <section class="car-list maruthi">
         <h1 class="heading">USED HYUNDAI CARS IN BANGALORE</h1>
         <form method="GET" action="/home/hyundai/add">
-        <button class="add-btn">ADD CAR</button>
+          <button class="add-btn">ADD CAR</button>
         </form>
         <div class="car-grid">
           <% for(let hyundai of hyundais) { %>
@@ -52,6 +62,13 @@
               <p class="car-specs"><%= hyundai.specs %></p>
               <p class="car-owner"><%= hyundai.owner %></p>
               <h3 class="car-price">Price: ₹ <%= hyundai.price %> Lakhs</h3>
+              <button class="book-btn">BUY NOW</button>
+              <form
+                method="POST"
+                action="/home/hyundai/<%= hyundai._id %>?_method=DELETE"
+              >
+                <button>Delete</button>
+              </form>
             </div>
           </div>
           <% } %>
