@@ -1,0 +1,93 @@
+div {
+    font-family: poppins;
+  }
+  
+  body {
+    background: linear-gradient(to  right, #7feaa6, #f07e9e);
+}
+
+  
+  
+  .nav_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* ensure it's above other content */
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    background: linear-gradient(to top right, #f7df80, #fefea5);
+    border: 2px solid rgb(250, 183, 75);
+    height: 75px;
+  }
+  
+  .logo {
+    position: relative;
+    left: 100px;
+  }
+  .fa-location-dot{
+  font-size: 35px;
+  padding-right: 10px;
+  }
+  
+  .location {
+    display: flex;
+    position: relative;
+    font-size: 22px;
+    left: 150px;
+  }
+  .nav_option {
+    position: relative;
+    left: 400px;
+  }
+  .buy{
+    font-size: 20px;
+    font-weight: 900;
+    margin-right: 20px;
+    background-color:  rgb(156, 223, 89);
+  }
+  .sell{
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .account {
+    display: flex;
+    position: relative;
+    left: 850px;
+  }
+  
+  .logo .logoimg {
+    height: 80px;
+    width: 100px;
+    border-radius: 30%;
+  }
+  
+  .location b {
+    position: relative;
+    top: 2px;
+  }
+  button {
+    margin-left: 5px;
+    border-radius: 20px;
+    border: none;
+  }
+  .fa-user{
+    background: none;
+    font-size: 25px;
+  }
+  .sell:hover {
+    font-weight: 900;
+    background-color: rgb(156, 223, 89);
+  }
+  .details{
+    margin-left: 100px;
+    margin-top: 100px;
+    position: relative;
+  }
+  input{
+    position: absolute;
+    left: 350px;
+  }
+
