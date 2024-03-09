@@ -8,12 +8,14 @@ const maruthi = require("./models/maruthi.js");
 const renault = require("./models/renault.js");
 const tata = require("./models/tata.js");
 const login = require("./models/login.js");
+const methodOverride = require("method-override");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(methodOverride("_method"));
 
 main()
   .then((res) => {
@@ -26,7 +28,7 @@ async function main() {
 }
 
 app.get("/home", (req, res) => {
-  res.render("home.ejs", { name: globalName});
+  res.render("home.ejs", { name: globalName });
 });
 
 // Maruthi Suzuki
@@ -115,7 +117,7 @@ app.post("/home", async (req, res) => {
     await newUser.save();
     console.log("New User created");
     globalName = name;
-    console.log(globalName)
+    console.log(globalName);
     res.redirect("/home");
   } catch (error) {
     console.error("Error creating new user:", error);
@@ -123,6 +125,193 @@ app.post("/home", async (req, res) => {
   }
 });
 
+app.post("/home/suzuki", async (req, res) => {
+  try {
+    let { sn, model, specs, owner, price } = req.body;
+    let newCar = new maruthi({
+      sn: sn,
+      model: model,
+      specs: specs,
+      owner: owner,
+      price: price,
+    });
+    await newCar.save();
+    console.log("New Car Added");
+
+    let maruthis = await maruthi.find();
+
+    const maruthiImage = [
+      "/requirements/m1.webp",
+      "/requirements/m2.webp",
+      "/requirements/m3.webp",
+      "/requirements/m4.webp",
+      "/requirements/m5.webp",
+      "/requirements/m6.webp",
+      "/requirements/m7.webp",
+      "/requirements/m8.webp",
+      "/requirements/m9.webp",
+    ];
+    res.render("suzuki.ejs", { maruthis, maruthiImage, name: globalName });
+  } catch (error) {
+    console.error("Error adding new car:", error);
+    res.status(500).send("Error adding new car");
+  }
+});
+
+app.post("/home/tata", async (req, res) => {
+  try {
+    let { sn, model, specs, owner, price } = req.body;
+    let newCar = new tata({
+      sn: sn,
+      model: model,
+      specs: specs,
+      owner: owner,
+      price: price,
+    });
+    await newCar.save();
+    console.log("New Car Created");
+
+    let tatas = await tata.find();
+
+    const tataImage = [
+      "/requirements/t1.webp",
+      "/requirements/t2.webp",
+      "/requirements/t3.webp",
+      "/requirements/t4.webp",
+      "/requirements/t5.webp",
+      "/requirements/t6.webp",
+      "/requirements/t7.webp",
+      "/requirements/t8.webp",
+      "/requirements/t9.webp",
+    ];
+    res.render("tata.ejs", { tatas, tataImage, name: globalName });
+  } catch (error) {
+    console.error("Error adding new car:", error);
+    res.status(500).send("Error adding new car");
+  }
+});
+
+app.post("/home/honda", async (req, res) => {
+  try {
+    let { sn, model, specs, owner, price } = req.body;
+    let newCar = new honda({
+      sn: sn,
+      model: model,
+      specs: specs,
+      owner: owner,
+      price: price,
+    });
+    await newCar.save();
+    console.log("New Car Created");
+
+    let hondas = await honda.find();
+    const hondaImage = [
+      "/requirements/h1.webp",
+      "/requirements/h2.webp",
+      "/requirements/h3.webp",
+      "/requirements/h4.webp",
+      "/requirements/h5.webp",
+      "/requirements/h6.webp",
+      "/requirements/h7.webp",
+      "/requirements/h8.webp",
+      "/requirements/h9.webp",
+    ];
+    res.render("honda.ejs", { hondas, hondaImage, name: globalName });
+  } catch (error) {
+    console.error("Error adding new car:", error);
+    res.status(500).send("Error adding new car");
+  }
+});
+
+app.post("/home/hyundai", async (req, res) => {
+  try {
+    let { sn, model, specs, owner, price } = req.body;
+    let newCar = new hyundai({
+      sn: sn,
+      model: model,
+      specs: specs,
+      owner: owner,
+      price: price,
+    });
+    await newCar.save();
+    console.log("New Car Created");
+
+    let hyundais = await hyundai.find();
+    const hyundaiImage = [
+      "/requirements/hy1.webp",
+      "/requirements/hy2.webp",
+      "/requirements/hy3.webp",
+      "/requirements/hy4.webp",
+      "/requirements/hy5.webp",
+      "/requirements/hy6.webp",
+      "/requirements/hy7.webp",
+      "/requirements/hy8.webp",
+      "/requirements/hy9.webp",
+    ];
+    res.render("hyundai.ejs", { hyundais, hyundaiImage, name: globalName });
+  } catch (error) {
+    console.error("Error adding new car:", error);
+    res.status(500).send("Error adding new car");
+  }
+});
+
+app.post("/home/renault", async (req, res) => {
+  try {
+    let { sn, model, specs, owner, price } = req.body;
+    let newCar = new renault({
+      sn: sn,
+      model: model,
+      specs: specs,
+      owner: owner,
+      price: price,
+    });
+    await newCar.save();
+    console.log("New Car Created");
+
+    let renaults = await renault.find();
+    const renaultImage = [
+      "/requirements/r1.webp",
+      "/requirements/r2.webp",
+      "/requirements/r3.webp",
+      "/requirements/r4.webp",
+      "/requirements/r5.webp",
+      "/requirements/r6.webp",
+      "/requirements/r7.webp",
+      "/requirements/r8.webp",
+      "/requirements/r9.webp",
+    ];
+    res.render("renault.ejs", { renaults, renaultImage, name: globalName });
+  } catch (error) {
+    console.error("Error adding new car:", error);
+    res.status(500).send("Error adding new car");
+  }
+});
+
+app.get("/home/suzuki/add", (req, res) => {
+  res.render("add_suzuki.ejs");
+});
+
+app.get("/home/honda/add", (req, res) => {
+  res.render("add_honda.ejs");
+});
+
+app.get("/home/hyundai/add", (req, res) => {
+  res.render("add_hyundai.ejs");
+});
+
+app.get("/home/tata/add", (req, res) => {
+  res.render("add_tata.ejs");
+});
+
+app.get("/home/renault/add", (req, res) => {
+  res.render("add_renault.ejs");
+});
+
+app.delete("/home/suzuki/:id", async (req, res) => {
+  let { id } = req.params;
+  let deleteCar = await maruthi.findByIdAndDelete(id);
+  res.redirect("/home/suzuki");
+});
 
 app.get("/", (req, res) => {
   res.send("working");

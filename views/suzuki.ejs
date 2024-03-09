@@ -35,7 +35,9 @@
       <section class="car-list maruthi">
         <br><br>
         <h1 class="heading">USED MARUTI SUZUKI CARS IN BANGALORE</h1>
+        <form method="GET" action="/home/suzuki/add">
         <button class="add-btn">ADD CAR</button>
+        </form>
         <div class="car-grid">
           <% for(let maruthi of maruthis) { %>
           <div class="car-card">
@@ -50,6 +52,9 @@
               <p class="car-owner"><%= maruthi.owner %></p>
               <h3 class="car-price">Price: ₹ <%= maruthi.price %> Lakhs</h3>
               <button class="book-btn">BUY NOW</button>
+              <form method="POST" action="/home/suzuki/<%= maruthi._id %>?_method=DELETE">
+              <button>Delete</button>
+              </form>
             </div>
           </div>
           <% } %>
