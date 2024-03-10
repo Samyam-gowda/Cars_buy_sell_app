@@ -202,6 +202,7 @@ app.post("/home/honda", async (req, res) => {
       price: price,
     });
     await newCar.save();
+    console.log(newCar)
     console.log("New Car Created");
 
     let hondas = await honda.find();
@@ -288,52 +289,57 @@ app.post("/home/renault", async (req, res) => {
 });
 
 app.get("/home/suzuki/add", (req, res) => {
-  res.render("add_suzuki.ejs");
+  res.render("add_suzuki.ejs", { name: globalName});
 });
 
 app.get("/home/honda/add", (req, res) => {
-  res.render("add_honda.ejs");
+  res.render("add_honda.ejs", { name: globalName});
 });
 
 app.get("/home/hyundai/add", (req, res) => {
-  res.render("add_hyundai.ejs");
+  res.render("add_hyundai.ejs", { name: globalName});
 });
 
 app.get("/home/tata/add", (req, res) => {
-  res.render("add_tata.ejs");
+  res.render("add_tata.ejs", { name: globalName});
 });
 
 app.get("/home/renault/add", (req, res) => {
-  res.render("add_renault.ejs");
+  res.render("add_renault.ejs", { name: globalName});
 });
 
 app.delete("/home/suzuki/:id", async (req, res) => {
   let { id } = req.params;
   await maruthi.findByIdAndDelete(id);
+  console.log("Car deleted");
   res.redirect("/home/suzuki");
 });
 
 app.delete("/home/honda/:id", async (req, res) => {
   let { id } = req.params;
   await honda.findByIdAndDelete(id);
+  console.log("Car deleted");
   res.redirect("/home/honda");
 });
 
 app.delete("/home/tata/:id", async (req, res) => {
   let { id } = req.params;
   await tata.findByIdAndDelete(id);
+  console.log("Car deleted");
   res.redirect("/home/tata");
 });
 
 app.delete("/home/hyundai/:id", async (req, res) => {
   let { id } = req.params;
   await hyundai.findByIdAndDelete(id);
+  console.log("Car deleted");
   res.redirect("/home/hyundai");
 });
 
 app.delete("/home/renault/:id", async (req, res) => {
   let { id } = req.params;
   await renault.findByIdAndDelete(id);
+  console.log("Car deleted");
   res.redirect("/home/hyundai");
 });
 

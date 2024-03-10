@@ -38,36 +38,24 @@
         </div>
         <div class="account">
           <button class="fa-solid fa-user"></button>
-          <b> &nbsp;&nbsp;&nbsp;&nbsp; Account </b>
+          <b> &nbsp;&nbsp;&nbsp;&nbsp; <%= name || 'Account' %> </b>
         </div>
       </div>
       <br /><br />
-      <!-- <div class="details">
-        <form method="POST" action="/home/suzuki">
-          <div class="add">PHOTOS<input type="text" /></div>
-          <div class="add">MODEL AND YEAR<input type="text" /></div>
-          <div class="add">
-            FUEL TYPE | TRANSMISSION TYPE | KM DRIVEN<input type="text" />
-          </div>
-          <div class="add">OWNERSHIP<input type="text" /></div>
-          <div class="add">PRICE<input type="text" /></div>
-          <button>Create</button>
-        </form>
-      </div>
-    </div> -->
+
       <br /><br /><br />
       <form method="POST" action="/home/tata">
-        <input type="text" name="sn" />
-        <br />
-        <input type="text" name="model" />
-        <br />
-        <input type="text" name="specs" />
-        <br />
-        <input type="text" name="owner" />
-        <br />
-        <input type="text" name="price" />
-        <br />
-        <button>Create</button>
+        <b class="data">PHOTOS</b> <input type="text" name="sn" placeholder="PHOTOS"/>
+        <br /><br>
+        <b class="data">MODEL AND YEAR</b><input type="text" name="model" placeholder="MODEL AND YEAR" />
+        <br /><br>
+        <b class="data">FUEL TYPE | TRANSMISSION TYPE | KM DRIVEN</b><input type="text" name="specs" placeholder="FUEL TYPE | TRANSMISSION TYPE | KM DRIVEN"/>
+        <br /><br>
+        <b class="data">OWNERSHIP</b><input type="text" name="owner" placeholder="OWNERSHIP"/>
+        <br /><br>
+        <b class="data">PRICE</b><input type="text" name="price"placeholder="PRICE" />
+        <br /><br>
+        <button class="create-btn">ADD-CAR</button>
       </form>
     </div>
   </body>
