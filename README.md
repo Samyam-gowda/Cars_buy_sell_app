@@ -8,6 +8,8 @@ npm init --yes
 ```
 npm i nodemon -g
 ```
+
+### Install these packages before starting server
 ```
 npm i express mongoose ejs method-override
 ```
